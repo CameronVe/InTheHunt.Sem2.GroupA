@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8abfcea2ea5bd646a9e5b8f5b4b2c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectInCart: {fileID: 0}
+  objectInCart: {fileID: 76083265554432249}
   cart: {fileID: 6088221408711444531}
   dolly:
     Enabled: 1

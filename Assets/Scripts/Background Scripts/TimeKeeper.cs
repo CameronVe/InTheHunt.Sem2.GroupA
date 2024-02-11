@@ -24,7 +24,7 @@ public class TimeKeeper : MonoBehaviour
 
     public TextMeshProUGUI textMeshProItem;
 
-    private TimeSpan timeSpan;
+    public TimeSpan timeSpan;
 
 
 
@@ -60,7 +60,7 @@ public class TimeKeeper : MonoBehaviour
         }
         //dd\\.hh\\:mm\\:ss\\.fffffff
 
-        textMeshProItem.text = timeSpan.ToString("mm\\:ss");
+        textMeshProItem.text = ">>" + timeSpan.TotalSeconds.ToString("00") + "<<";
        
 
     }
