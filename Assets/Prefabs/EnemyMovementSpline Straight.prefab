@@ -261,7 +261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4990343494453807123}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04366999, y: 0.70669526, z: 0.04378679, w: 0.70481026}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -449,5 +449,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3321413743761783115}
   health: 1
+  scoreOnDeath: 100
   isBoss: 0
   isPlayer: 0

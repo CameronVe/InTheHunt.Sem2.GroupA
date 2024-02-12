@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 8733800849291146626}
   health: 1
+  scoreOnDeath: 100
   isBoss: 0
   isPlayer: 0
 --- !u!1 &2900918429910046050

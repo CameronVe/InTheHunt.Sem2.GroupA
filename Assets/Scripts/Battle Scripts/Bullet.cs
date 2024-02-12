@@ -16,6 +16,7 @@ namespace Matthew
         public Vector2 direction = new Vector2(1, 0); // Direction in which the bullet will move
         public float speed = 8; // Speed of the bullet
         public Vector2 velocity; // Current velocity of the bullet
+        public float timeOfDeletionInSeconds = 4;
 
         [SerializeField] bool top;
         [SerializeField] bool forward;
@@ -25,7 +26,7 @@ namespace Matthew
         void Start()
         {
             // Destroying the bullet after # seconds to prevent the player from killing enemies off screen.
-            Destroy(gameObject, 4);
+            Destroy(gameObject, timeOfDeletionInSeconds);
         }
 
         // Update is called once per frame

@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Tristan;
-using System;
 
 namespace Tristan
 {
 	/// <summary>
 	/// Author: Tristan McKay
-	/// Description: This script is in progress
+	/// Description: This script demonstrates how to ... in Unity
 	/// </summary>
 
-	public class ResetCountDownTimer : MonoBehaviour 
+	public class FreezeTimer : MonoBehaviour 
 	{
-		[SerializeField] TimeKeeper timeKeeper;
-		
+        [SerializeField] TimeKeeper timeKeeper;
+
         private void OnTriggerEnter(Collider other)
         {
-			timeKeeper.timer = 0.0f;
+            timeKeeper.isFrozen = true;
         }
     }
 }
