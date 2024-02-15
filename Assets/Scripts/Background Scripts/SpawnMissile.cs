@@ -21,7 +21,7 @@ namespace Tristan
 
         private void Start()
         {
-			spawnLocation = new Vector3(gameObject.transform.position.x, DepthToSpawnMissile, gameObject.transform.position.z);
+            spawnLocation = new Vector3(gameObject.transform.position.x, DepthToSpawnMissile, gameObject.transform.position.z);
         }
 
         private void Update()

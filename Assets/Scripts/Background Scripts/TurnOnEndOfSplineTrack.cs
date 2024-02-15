@@ -38,6 +38,7 @@ namespace Tristan
         // The max length before the right turn
 
         [SerializeField] float splineMaxBeforeTurn;
+        [SerializeField] float splineMinBeforeTurn = 0;
 
         // In this case this is forward
 
@@ -70,7 +71,7 @@ namespace Tristan
                 {
                     // Checks the position of the cart
 
-                    if (cartPosition == 0)
+                    if (cartPosition <= splineMinBeforeTurn)
                     {
                         // This increments the float until the desired float is met (it's a turn animation)
 

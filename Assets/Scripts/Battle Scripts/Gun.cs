@@ -27,13 +27,21 @@ namespace Matthew
         bool shootTop;                     // Flag to determine if the gun should shoot
         bool shootBottom;                  // Flag to determine if the gun should shoot
 
+        [SerializeField] bool topGun;
+        [SerializeField] bool forwardGun;
+        [SerializeField] bool bottomGun;
+
+        [SerializeField] Transform topGunTrasform;
+        [SerializeField] Transform forwardGunTrasform;
+        [SerializeField] Transform bottomGunTrasform;
+
         [SerializeField] Bullet bulletTop;                     // Bullet prefab to be instantiated
         [SerializeField] Bullet bulletForward;                     // Bullet prefab to be instantiated
         [SerializeField] Bullet bulletBottom;                     // Bullet prefab to be instantiated
 
-        [SerializeField] float shootForwardCooldowm = 1f;   // Time delay between shots
-        [SerializeField] float shootTopCooldowm = 1f;       // Time delay between shots
-        [SerializeField] float shootBottomCooldowm = 1f;    // Time delay between shots
+        [SerializeField] float shootForwardCooldown = 1f;   // Time delay between shots
+        [SerializeField] float shootTopCooldown = 1f;       // Time delay between shots
+        [SerializeField] float shootBottomCooldown = 1f;    // Time delay between shots
 
         float shootForwardtimer;                            // Timer to control the shooting frequency
         float shootToptimer;                                // Timer to control the shooting frequency
@@ -48,17 +56,16 @@ namespace Matthew
 
         void Update()
         {
-            CheckTime(ref shootToptimer, shootTopCooldowm, ref shootTop, bulletTop);
+            CheckTime(ref shootToptimer, shootTopCooldown, ref shootTop, bulletTop);
 
-            CheckTime(ref shootForwardtimer, shootForwardCooldowm, ref shootForward, bulletForward);
+            CheckTime(ref shootForwardtimer, shootForwardCooldown, ref shootForward, bulletForward);
 
-            CheckTime(ref shootBottomtimer, shootBottomCooldowm, ref shootBottom, bulletBottom);
+            CheckTime(ref shootBottomtimer, shootBottomCooldown, ref shootBottom, bulletBottom);
 
 
-            // Check if the Fire1 is pressed (left ctrl, mouse 0, joystick button 0)
-            shootForward = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0);
-            shootTop = Input.GetKey(KeyCode.LeftShift);
-            shootBottom = Input.GetKey(KeyCode.C);
+            shootTop = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Mouse1) || Input.GetKey(KeyCode.Joystick1Button3);
+            shootForward = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Joystick1Button1);
+            shootBottom = Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.Joystick1Button0);
         }
 
         //Made the bullet timer into a method to split it into the three guns we need.
@@ -90,7 +97,20 @@ namespace Matthew
 
         public void Shoot(Bullet theBullet)
         {
-            Instantiate(theBullet.gameObject, transform.position, Quaternion.identity);
+            if (topGun == true)
+            {
+                Instantiate(theBullet.gameObject, topGunTrasform.position, Quaternion.identity);
+            }
+
+            if (forwardGun == true)
+            {
+                Instantiate(theBullet.gameObject, forwardGunTrasform.position, Quaternion.identity);
+            }
+
+            if (bottomGun == true)
+            {
+                Instantiate(theBullet.gameObject, bottomGunTrasform.position, Quaternion.identity);
+            }
         }
     }
 }
