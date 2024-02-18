@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: 88fe8a44bdd4da94db382ca6aa059df9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1709
+        width: 542
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4915267eabef339469d7256363173c4c
+      internalID: 180182214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_1
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1709
+        width: 541
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fcd2e898ab112643897df0430155d0c
+      internalID: 743113596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_2
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1200
+        width: 853
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75805cc23aa8b154f9622aedc9cb9a18
+      internalID: 1442220759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1378
+        width: 542
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256fd40f6cddbe844a1c9c233210937a
+      internalID: -780868261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_4
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1378
+        width: 541
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439477c853d930f4ca563aba917614e8
+      internalID: -1443500252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1013
+        width: 542
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71381671839272440b70384f8f477580
+      internalID: 1101530083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_6
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1013
+        width: 541
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a1d2578728ab942b330fa8a8fe8dc5
+      internalID: 994756580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 682
+        width: 542
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a1c8dbf1eaa184896558aae64563bc
+      internalID: 17799722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_8
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 682
+        width: 541
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96be5ca27caf3e146affd01f97f9c77c
+      internalID: 269580709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_9
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 682
+        width: 304
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dbe17df1f893240ac00f9d367e910e
+      internalID: 1175093152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 31
+        width: 1090
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6844d6af0109583449edc648fb7cb73d
+      internalID: 1096492309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_13
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 133
+        width: 304
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e7e0d6d69a27a49b8907433ca50c4c
+      internalID: -948990670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_14
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 133
+        width: 304
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7dad1e414646340a5aac9db24f0d0f
+      internalID: -36290966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InTheHunt_-_SpriteSheet_V1-01_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 43
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94ea6c2e38c8ab438132b1bd48fb46c
+      internalID: 1038262363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6f162fec65372924a813a5836ff2cddb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      InTheHunt_-_SpriteSheet_V1-01_0: 180182214
+      InTheHunt_-_SpriteSheet_V1-01_1: 743113596
+      InTheHunt_-_SpriteSheet_V1-01_10: -607199091
+      InTheHunt_-_SpriteSheet_V1-01_11: 690817907
+      InTheHunt_-_SpriteSheet_V1-01_12: 1096492309
+      InTheHunt_-_SpriteSheet_V1-01_13: -948990670
+      InTheHunt_-_SpriteSheet_V1-01_14: -36290966
+      InTheHunt_-_SpriteSheet_V1-01_15: 1038262363
+      InTheHunt_-_SpriteSheet_V1-01_2: 1442220759
+      InTheHunt_-_SpriteSheet_V1-01_3: -780868261
+      InTheHunt_-_SpriteSheet_V1-01_4: -1443500252
+      InTheHunt_-_SpriteSheet_V1-01_5: 1101530083
+      InTheHunt_-_SpriteSheet_V1-01_6: 994756580
+      InTheHunt_-_SpriteSheet_V1-01_7: 17799722
+      InTheHunt_-_SpriteSheet_V1-01_8: 269580709
+      InTheHunt_-_SpriteSheet_V1-01_9: 1175093152
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
