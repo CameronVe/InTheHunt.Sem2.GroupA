@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 683746255364041790}
   - component: {fileID: 6249678008355091645}
   - component: {fileID: 3473076654182697268}
+  - component: {fileID: -8226454092089266626}
   - component: {fileID: -2385198593447489186}
   - component: {fileID: -2615896380580611972}
-  - component: {fileID: -8226454092089266626}
   - component: {fileID: 960910497011813986}
   m_Layer: 0
   m_Name: Bullet Bottom
@@ -88,6 +88,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-8226454092089266626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620571089418129762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745cef747ac53c14887274b169b0efc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 1, y: 0}
+  speed: 8
+  velocity: {x: 0, y: 0}
+  timeOfDeletionInSeconds: 2
+  top: 0
+  forward: 0
+  bottom: 1
 --- !u!54 &-2385198593447489186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,24 +155,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8226454092089266626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620571089418129762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745cef747ac53c14887274b169b0efc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 1, y: 0}
-  speed: 8
-  velocity: {x: 0, y: 0}
-  top: 0
-  forward: 0
-  bottom: 1
 --- !u!114 &960910497011813986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +303,7 @@ MonoBehaviour:
   direction: {x: 1, y: 0}
   speed: 20
   velocity: {x: 0, y: 0}
+  timeOfDeletionInSeconds: 4
   top: 0
   forward: 0
   bottom: 1

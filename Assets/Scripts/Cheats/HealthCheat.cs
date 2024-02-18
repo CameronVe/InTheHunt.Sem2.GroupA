@@ -28,10 +28,12 @@ namespace Tristan
 
 			if (count == 1)
 			{
-				count++;
                 GameObject player = GameObject.FindGameObjectWithTag("Hero Submarine");
-                player.GetComponent<Health>().health = 999_999_999;
-				Debug.Log("; ' were pushed");
+				if (player.GetComponent<Health>().health < 10)
+				{
+					player.GetComponent<Health>().health = 14;
+                }
+                Debug.Log("Health Cheat is On");
             }
         }
 	}

@@ -16,7 +16,7 @@ namespace Matthew
         public Vector2 direction = new Vector2(1, 0); // Direction in which the bullet will move
         public float speed = 8; // Speed of the bullet
         public Vector2 velocity; // Current velocity of the bullet
-        public float timeOfDeletionInSeconds = 4;
+        public float timeOfDeletionInSeconds = 2;
 
         [SerializeField] bool top;
         [SerializeField] bool forward;

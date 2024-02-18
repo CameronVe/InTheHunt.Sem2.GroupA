@@ -7,35 +7,30 @@ using Matthew;
 namespace Tristan
 {
     /// <summary>
-    /// Author: Tristan McKay
-    /// Description: This script is for the missile silo, it spawns the missiles
+    /// Author: Tristan McKay, inspired by Matthew Hamm's Gun Script
+    /// Description: This script is the shooting script, it contains a transform
+    ///              where the bullet will spawn and the input's it will take to
+    ///              spawn the bullet (depending on which bool you turn to true).
     /// </summary>
 
 
     public class NewGun : MonoBehaviour
     {
-        bool playerInput;
+        bool playerInput;                                   // Flag to determine if the gun should shoot
 
-        [SerializeField] bool topGun;
-        [SerializeField] bool forwardGun;
-        [SerializeField] bool bottomGun;
+        [SerializeField] bool topGun;                       //Tick this if the bullet will be fired from the top so it uses that input
+        [SerializeField] bool forwardGun;                   //Tick this if the bullet will be fired from the front so it uses that input
+        [SerializeField] bool bottomGun;                    //Tick this if the bullet will be fired from the bottom so it uses that input
 
-        [SerializeField] float bulletCooldown = 0.5f;
-        float bulletTimer;
+        [SerializeField] public float bulletCooldown = 0.5f;       // Time delay between shots
+        float bulletTimer;                                  // Timer to control the shooting frequency
 
-        [SerializeField] Matthew.Bullet bullet;                     // Bullet prefab to be instantiated
+        [SerializeField] Matthew.Bullet bullet;             // Bullet prefab to be instantiated
 
         [SerializeField] Transform bulletSpawnLocation;
 
         int count;                                          //Makes sure multiple bullets don't fire at once from the same gun.
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
         void Update()
         {
             // Check if enough time has passed to allow shooting
@@ -44,14 +39,10 @@ namespace Tristan
                 if (playerInput == true && count == 0)
                 {
                     playerInput = false;
-                    //guns[currentGunIndex].Shoot(theBullet); // Shoot only from the current gun
 
                     gameObject.GetComponent<NewGun>().Shoot(bullet);
 
                     bulletTimer = 0; // Reset the timer after shooting
-
-                    // Update the index to the next gun
-                    //currentGunIndex = (currentGunIndex + 1) % guns.Length;
                     count++;
                 }
             }

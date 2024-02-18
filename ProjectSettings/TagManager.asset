@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Hero Submarine
   - Missiles
+  - Invulnerable
+  - PowerupHolder
   layers:
   - Default
   - TransparentFX
