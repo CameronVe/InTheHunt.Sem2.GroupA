@@ -43,6 +43,11 @@ public class CamaraMovementSystem : MonoBehaviour
             currentPosition.y = smallestYPosition;
         }
 
+        if (currentPosition.x > 1599)
+        {
+            currentPosition.x = 1599;
+        }
+
         // Update the follower's position.
         transform.position = currentPosition;
     }
