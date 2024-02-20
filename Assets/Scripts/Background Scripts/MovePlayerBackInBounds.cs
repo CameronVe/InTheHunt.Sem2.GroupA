@@ -8,13 +8,16 @@ public class MovePlayerBackInBounds : MonoBehaviour
     [SerializeField] bool isFloor;
     private void OnTriggerEnter(Collider other)
     {
-        if (isFloor == true)
+        if (other.CompareTag("Hero Submarine"))
         {
-            other.transform.position = new Vector3(other.transform.position.x, newPosition, 0);
-        }
-        else
-        {
-            other.transform.position = new Vector3(newPosition, other.transform.position.y, 0);
+            if (isFloor == true)
+            {
+                other.transform.position = new Vector3(other.transform.position.x, newPosition, 0);
+            }
+            else
+            {
+                other.transform.position = new Vector3(newPosition, other.transform.position.y, 0);
+            }
         }
     }
 }

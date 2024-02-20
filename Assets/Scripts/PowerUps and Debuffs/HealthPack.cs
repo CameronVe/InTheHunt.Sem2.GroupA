@@ -16,7 +16,7 @@ namespace Tristan
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Hero Submarine")
+            if (other.CompareTag("Hero Submarine"))
             {
                 other.GetComponent<Health>().health += 1;
                 Destroy(gameObject);

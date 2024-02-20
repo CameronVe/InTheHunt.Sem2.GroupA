@@ -8,8 +8,10 @@ public class ScreenBlocker : MonoBehaviour
     [SerializeField] float offsetXPosition;
     private void OnTriggerEnter(Collider other)
     {
-        float newPosition = transform.position.x + offsetXPosition;
-        other.transform.position = new Vector3(newPosition, other.transform.position.y, 0);
-
+        if(other.tag == "Hero Submarine")
+        {
+            float newPosition = transform.position.x + offsetXPosition;
+            other.transform.position = new Vector3(newPosition, other.transform.position.y, 0);
+        }
     }
 }

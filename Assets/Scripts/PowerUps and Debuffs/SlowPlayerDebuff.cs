@@ -21,9 +21,7 @@ namespace Tristan
         float timer;
         private void OnTriggerEnter(Collider other)
         {
-            
-
-            if(other.tag != "Enemy")
+            if(other.CompareTag("Hero Submarine"))
             {
                 player = other.gameObject;
                 other.GetComponent<PlayerMovement>().moveSpeed = 6;

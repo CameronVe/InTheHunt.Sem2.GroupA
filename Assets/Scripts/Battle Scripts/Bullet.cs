@@ -20,6 +20,7 @@ namespace Matthew
 
         [SerializeField] bool top;
         [SerializeField] bool forward;
+        [SerializeField] bool Back;
         [SerializeField] bool bottom;
 
         // Start is called before the first frame update
@@ -46,6 +47,11 @@ namespace Matthew
             if (forward == true)
             {
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
+
+            if (Back == true)
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
 
             if (bottom == true)

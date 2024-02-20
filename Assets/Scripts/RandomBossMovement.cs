@@ -1,13 +1,16 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RandomBossMovement : MonoBehaviour
 {
     float timer = 0;
+    float spawnTimer = 0;
     public float allowedTime;
     public float seconds;
+    public float spawnWaitTime = 3;
 
     public float height;
     public float widthRight;
@@ -23,16 +26,24 @@ public class RandomBossMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > allowedTime)
+        if (spawnTimer > spawnWaitTime)
         {
-            timer = 0;
-            Vector3 newVector3Position = new Vector3(Random.Range(widthLeft, widthRight), Random.Range(depth, height), 0);
-            DOTween.To(() => transform.localPosition, newPosition => transform.localPosition = newPosition, newVector3Position, seconds);
-            //DOTween.Move
+            if (timer > allowedTime)
+            {
+                timer = 0;
+                Vector3 newVector3Position = new Vector3(Random.Range(widthLeft, widthRight), Random.Range(depth, height), 0);
+                transform.DOLocalMove(newVector3Position, seconds);
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
         }
-        else
+        else if (spawnTimer < spawnWaitTime)
         {
-            timer += Time.deltaTime;
+            spawnTimer += Time.deltaTime;
         }
+
+        
     }
 }

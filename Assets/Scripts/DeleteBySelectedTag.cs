@@ -6,9 +6,11 @@ public class DeleteBySelectedTag : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            GameObject parent = other.GetComponentInParent<Transform>().gameObject;
+            Destroy(parent);
         }
+        Debug.Log("Hit");
     }
 }

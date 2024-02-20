@@ -33,7 +33,7 @@ namespace Tristan
 				{
 					player.GetComponent<Health>().health = 14;
                 }
-                Debug.Log("Health Cheat is On");
+                //Debug.Log("Health Cheat is On");
             }
         }
 	}
