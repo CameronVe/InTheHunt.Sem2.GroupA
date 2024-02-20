@@ -51,7 +51,7 @@ public class TurnObject : MonoBehaviour
         }
         else
         {
-            spin += Time.deltaTime * spinSpeed;
+            spin += Time.fixedDeltaTime * spinSpeed;
         }
     }
 }
