@@ -13,100 +13,57 @@ namespace Matthew
 
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] float seaLevelYPosition = 10;
+        public float moveSpeed = 5f;
+        [SerializeField] private float TopPositionY = 9f;
+        [SerializeField] private float BottomPositionY = 1f;
 
-        Vector3 playerInput;
-
-        Gun[] guns;
-
-        public float moveSpeed = 12;
-
-        //bool moveUp;
-        //bool moveDown;
-        //bool moveLeft;
-        //bool moveRight;
-        //bool shoot;
-
-        // Start is called before the first frame update
+        private Transform transform;
+        private Vector3 moveVector;
+        private Rigidbody rigidbody;
 
         void Start()
         {
-            guns = GetComponentsInChildren<Gun>();
+            //Cache transform and initalise moveVector
+            transform = this.GetComponent<Transform>();
+            Vector3 moveVector = Vector3.zero;
+
+            rigidbody = GetComponent<Rigidbody>();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
+            //MoveUsingTransform();
+        }
+        void FixedUpdate()
+        {
+            MoveUsingRigidbody();
+        }
 
-            //this just makes it stop at a certain y position (basically Mathf.Clamp(), but didn't work for some reason).
-            if (transform.position.y > seaLevelYPosition)
+        /// <summary>
+        /// Move the player using common keys (it also allows up and down movement too)
+        /// </summary>
+        private void MoveUsingRigidbody()
+        {
+            moveVector = Vector3.zero;
+
+            float xMovement = Input.GetAxis("Horizontal");
+            float yMovement = Input.GetAxis("Vertical");
+
+            moveVector.x = xMovement;
+
+            if (transform.position.y < TopPositionY && yMovement > 0)
             {
-                transform.position = new Vector3(transform.position.x, seaLevelYPosition, transform.position.z);
+                moveVector.y = yMovement;
             }
 
-            //Simplified input system. Horizontal is the W & S key, up & down key, joystick up & down. Vertical is the A & D key, Left & Right key, joystick Left & Right.
-            playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-
-            #region Matthew Hamm's Inputs
-            //Movement Keys
-            //moveUp = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
-            //moveDown = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
-            //moveLeft = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
-            //moveRight = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
-
-            //Shoot Key
-            //GetKeyDown - Only shoot when the key is pressed.
-            //GetKey - Holding down the key will keep shooting.
-            #endregion Matthew Hamm's Inputs
-        }
-
-        private void FixedUpdate()
-        {
-
-            //I know what you were doing and it was smart, but here is a more compact version. The ".normalized" on the playerInput does what you were doing below.
-            transform.position = transform.position + playerInput.normalized * moveSpeed * Time.fixedDeltaTime;
-
-            #region Matthew Hamm's Speed Normalization
-            //Vector3 pos = transform.position;
-
-            //float moveAmout = moveSpeed * Time.fixedDeltaTime;
-            //Vector3 move = Vector3.zero;
-
-            //if (moveUp)
-            //{
-            //    move.y += moveAmout;
-            //}
-
-            //if (moveDown)
-            //{
-            //    move.y -= moveAmout;
-            //}
-
-            //if (moveLeft)
-            //{
-            //    move.x -= moveAmout;
-            //}
-
-            //if (moveRight)
-            //{
-            //    move.x += moveAmout;
-            //}
-
-            ////Stops the sub moving faster on the diagonal
-            //float moveMagnitude = Mathf.Sqrt(move.x * move.x + move.y * move .y);
-            //if (moveMagnitude > moveAmout)
-            //{
-            //    float ratio = moveAmout / moveMagnitude;
-            //    move *= ratio;
-            //}
-
-            //pos += move;
+            if (transform.position.y > BottomPositionY && yMovement < 0)
+            {
+                moveVector.y = yMovement;
+            }
 
 
-            //Stops the sub from moving outside of the camera
-
-            //transform.position = pos;
-            #endregion Matthew Hamm's Speed Normalization
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.MovePosition(transform.position + moveVector.normalized * moveSpeed * Time.fixedDeltaTime);
         }
     }
 }
