@@ -54,6 +54,7 @@ MonoBehaviour:
   timeOfDeletionInSeconds: 40
   top: 1
   forward: 0
+  Back: 0
   bottom: 0
 --- !u!114 &2756453311124031723
 MonoBehaviour:
@@ -68,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectedTag: Hero Submarine
+  dontDestroy: 1
 --- !u!114 &8338451175813416230
 MonoBehaviour:
   m_ObjectHideFlags: 0

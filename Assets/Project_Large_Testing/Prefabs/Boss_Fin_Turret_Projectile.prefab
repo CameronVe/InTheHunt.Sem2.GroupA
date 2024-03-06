@@ -75,10 +75,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3041662223509743640}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 684c1a8b7018f0e4fb9fd4e6c3777f4d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -8930216295621802116}
   m_SourcePrefab: {fileID: 100100000, guid: 684c1a8b7018f0e4fb9fd4e6c3777f4d, type: 3}
 --- !u!1 &2341266022264109508 stripped
 GameObject:
@@ -126,17 +122,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 20
-  projectileTimer: 0
---- !u!114 &-8930216295621802116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2341266022264109508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338bccdc3b1bc90469785aaf1fad9dc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectedTag: Hero Submarine

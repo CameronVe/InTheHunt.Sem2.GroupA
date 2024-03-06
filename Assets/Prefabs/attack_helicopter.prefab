@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: be54b0abe81cf75458296505e47dd4cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,10 +120,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
+  explosion: {fileID: 0}
+  boss2: {fileID: 0}
   health: 1
   scoreOnDeath: 1
-  isBoss: 0
+  isBoss1: 0
+  isBoss2: 0
+  isPuffer: 0
   isPlayer: 0
+  flying: 1
 --- !u!1 &1511208441917537586
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4905730558c494981000afb95145f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 360
   rotateX: 0
   rotateY: 1
   rotateZ: 0
@@ -268,7 +272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d91a3d8f5a5eb0e40abdebd2df45e28b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -351,7 +355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1b451c8fd85976748a53f9ca228848de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -418,7 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4905730558c494981000afb95145f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 120
   rotateX: 0
   rotateY: 0
   rotateZ: 1

@@ -10,6 +10,7 @@ public class DamageOnCollision : MonoBehaviour
 {
     // tag to be changed when attached to hero missiles
     public string detectedTag = "Hero Submarine";
+    public bool dontDestroy = false;
 
     void OnTriggerEnter(Collider whatWasHit)
     {
@@ -18,8 +19,11 @@ public class DamageOnCollision : MonoBehaviour
             //this line takes health from the object with the detectedTag
             whatWasHit.GetComponent<Health>().health -= 1;
 
-            //this line destroys the missile the script is attached to
-            Destroy(gameObject);
+            if (!dontDestroy)
+            {
+                //this line destroys the missile the script is attached to
+                Destroy(gameObject);
+            }
         }
        
     }

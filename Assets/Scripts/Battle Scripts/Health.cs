@@ -8,13 +8,20 @@ public class Health : MonoBehaviour
 {
     [SerializeField] GameObject parent;
     GameObject[] powerupsToDrop;
-    Transform powerupsHolder;
+    GameObject[] powerupsToDropAir;
+    [SerializeField] GameObject explosion;
+    Transform powerupsHolder; 
+    Transform powerupsHolderAir;
+    [SerializeField] GameObject boss2;
 
     public int health = 1;
     public int scoreOnDeath = 1;
 
-    [SerializeField] bool isBoss;
+    [SerializeField] bool isBoss1;
+    [SerializeField] bool isBoss2;
+    [SerializeField] bool isPuffer;
     [SerializeField] bool isPlayer;
+    [SerializeField] bool flying;
 
     bool check = true;
 
@@ -23,8 +30,9 @@ public class Health : MonoBehaviour
     private void Start()
     {
         powerupsHolder = GameObject.FindWithTag("PowerupHolder").transform;
+        powerupsHolderAir = GameObject.FindWithTag("PowerupHolderAir").transform;
 
-        if (!isPlayer && !isBoss)
+        if (!isPlayer && !isBoss1 && !flying)
         {
             powerupsToDrop = new GameObject[powerupsHolder.childCount];
 
@@ -36,6 +44,20 @@ public class Health : MonoBehaviour
                 powerupsToDrop[i] = child.gameObject;
             }
         }
+
+        if (flying)
+        {
+            powerupsToDropAir = new GameObject[powerupsHolderAir.childCount];
+
+            // Iterate through each child and adds it to the array
+
+            for (int i = 0; i < powerupsHolderAir.childCount; i++)
+            {
+                Transform child = powerupsHolderAir.GetChild(i);
+                powerupsToDropAir[i] = child.gameObject;
+            }
+        }
+
 
         score = FindFirstObjectByType<PlayerScore>();
     }
@@ -52,9 +74,38 @@ public class Health : MonoBehaviour
             health = 14;
         }
 
-        if (health <= 0 && isBoss)
+        if (health <= 0 && isBoss2)
         {
             SceneManager.LoadScene("WinScreen");
+        }
+        if (health <= 0 && isBoss1)
+        {
+            gameObject.SetActive(false);
+            boss2.SetActive(true);
+        }
+
+        if (health <= 0 && isPuffer)
+        {
+            gameObject.transform.localScale = Vector3.zero;
+            Instantiate(explosion, transform.position, Quaternion.identity);
+        }
+
+        if (health <= 0 && flying)
+        {
+            if (check)
+            {
+                check = false;
+                score.score += scoreOnDeath;
+
+                int doISpawn = Random.Range(0, 100);
+                if (doISpawn > 60)
+                {
+                    int whatPowerupAmI = Random.Range(0, powerupsToDropAir.Length);
+                    Instantiate(powerupsToDropAir[whatPowerupAmI], gameObject.transform.position, Quaternion.identity);
+                }
+            }
+            Destroy(gameObject);
+            Destroy(parent);
         }
 
         if (health <= 0)

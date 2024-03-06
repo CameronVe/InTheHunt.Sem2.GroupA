@@ -14,7 +14,6 @@ namespace JonathanBannister
         [SerializeField] GameObject turretProjectilePrefab;
         [SerializeField] Transform turretProjectileSpawnPoint1;
         [SerializeField] float timer = 3f;
-        [SerializeField] float distanceBeforeFire = 50;
         private GameObject player;
 
         void Start()
@@ -39,7 +38,7 @@ namespace JonathanBannister
             //    StartCoroutine(SpawnDelay());
             //}
 
-                if (distance < distanceBeforeFire)
+                if (distance < 50)
                 {
                     timer += Time.deltaTime;
 

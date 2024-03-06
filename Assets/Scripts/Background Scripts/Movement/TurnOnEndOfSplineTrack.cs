@@ -20,6 +20,8 @@ namespace Tristan
     {
         [SerializeField] GameObject objectInCart;
 
+        [SerializeField] GameObject bomb;
+
         [SerializeField]
         private CinemachineSplineCart cart;
 
@@ -32,6 +34,7 @@ namespace Tristan
         [SerializeField] bool isTurnX = false;
         [SerializeField] bool isTurnY = true;
         [SerializeField] bool isTurnZ = false;
+        [SerializeField] bool dropsBombs = false;
 
         [SerializeField] float secondsToTurn = 3;
 
@@ -47,6 +50,10 @@ namespace Tristan
         // In this case this is backwards
 
         [SerializeField] float cartSpeedRight;
+        //[SerializeField] float BombSpawnPosition;
+
+        float timer = 0;
+        [SerializeField] float SpawnBombTime = 7.5f;
 
         private void Start()
         {
@@ -58,7 +65,21 @@ namespace Tristan
             TurnAxis(isTurnX, objectInCart.transform.localRotation.x, -180, 0, 0, secondsToTurn);
             TurnAxis(isTurnY, objectInCart.transform.localRotation.y, 0, -180, 0, secondsToTurn);
             TurnAxis(isTurnZ, objectInCart.transform.localRotation.z, 0, 0, -180, secondsToTurn);
+
+            if (dropsBombs)
+            {
+                if (timer > SpawnBombTime)
+                {
+                    Instantiate(bomb.gameObject, transform.position, Quaternion.identity);
+                    timer = 0;
+                }
+                else
+                {
+                    timer += Time.deltaTime;
+                }
+            }
         }
+
         private void TurnAxis(bool check, float transformAxis, float x, float y, float z, float seconds)
         {
             float cartPosition = cart.SplinePosition;
@@ -105,6 +126,8 @@ namespace Tristan
                 }
             }
         }
+
+        
     }
 }
 

@@ -740,6 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInCart: {fileID: 3299612030839115714}
+  bomb: {fileID: 8876527351034433909, guid: f5bc9227c13ca864a8cff5e4078f6d58, type: 3}
   cart: {fileID: 415269390739229002}
   dolly:
     Enabled: 1
@@ -748,11 +749,13 @@ MonoBehaviour:
   isTurnX: 1
   isTurnY: 0
   isTurnZ: 0
+  dropsBombs: 1
   secondsToTurn: 3
   splineMaxBeforeTurn: 21.8
   splineMinBeforeTurn: 0
   cartSpeedLeft: 5
   cartSpeedRight: -5
+  SpawnBombTime: 4
   references:
     version: 2
     RefIds:

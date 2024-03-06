@@ -17,7 +17,7 @@ namespace JonathanBannister
         private GameObject player;
         private Rigidbody rigidbody;
         public float force;
-        public float projectileTimer;
+        //public float projectileTimer;
         //public float projectileLife = 1;
 
         void Start()
